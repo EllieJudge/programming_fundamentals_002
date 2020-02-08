@@ -23,23 +23,30 @@ const catalogue = [
 ];
 
 function countBooks() {
-  // Your code here
+  return catalogue.length;
 }
 
 function checkBook(book) {
-  // Your code here
+  return catalogue.includes(book);
 }
 
 function countBooksByFirstLetter(letter) {
-  // Your code here
+  let count = 0;
+  catalogue.forEach(t => t.charAt(0) === letter ? count++ : []);
+  return count;
 }
 
 function countBooksByKeyword(keyword) {
-  // Your code here
+  // let count = 0;
+  // const re = new RegExp(keyword, "gi");
+  // catalogue.forEach(b => b.match(re) ? count++ : []);
+  // return count;
 }
 
 function getBooksByAuthor(author) {
-  // Your code here
+  let booksByAuthor = [];
+  catalogue.forEach(t => t.includes(author) ? booksByAuthor.push(t) : '');
+  return booksByAuthor;
 }
 
 module.exports = {
