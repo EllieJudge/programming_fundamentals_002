@@ -37,27 +37,23 @@ test("returns number of books beginning with given letter", () => {
   expect(catalogueService.countBooksByFirstLetter('Z')).toBe(0);
 });
 
-// describe("catalogueService.countBooksByKeyword", () => {
-//   test("returns number of books that match a given keyword", () => {
-//     expect(catalogueService.countBooksByKeyword("assassin")).toBe(3);
-//   });
-// });
+describe("catalogueService.countBooksByKeyword", () => {
+  test("returns number of books that match a given keyword", () => {
+    expect(catalogueService.countBooksByKeyword("assassin")).toBe(3);
+  });
+});
 
-// test("returns number of books that match a given keyword", () => {
-//   expect(catalogueService.countBooksByKeyword("pineapple")).toBe(0);
-// });
+test("returns number of books that match a given keyword", () => {
+  expect(catalogueService.countBooksByKeyword("pineapple")).toBe(0);
+});
 
-// test("returns number of books that match a given keyword", () => {
-//   expect(catalogueService.countBooksByKeyword(2666)).toBe(1);
-// });
+test("returns number of books that match a given keyword", () => {
+  expect(catalogueService.countBooksByKeyword(2666)).toBe(1);
+});
 
-// test("returns number of books that match a given keyword", () => {
-//   expect(catalogueService.countBooksByKeyword(true)).toBe(0);
-// });
-
-// test("returns number of books that match a given keyword", () => {
-//   expect(catalogueService.countBooksByKeyword([1, 2, 3])).toBe(0);
-// });
+test("returns number of books that match a given keyword", () => {
+  expect(catalogueService.countBooksByKeyword(true)).toBe(0);
+});
 
 describe("catalogueService.getBooksByAuthor", () => {
   test("returns books by a given author", () => {
