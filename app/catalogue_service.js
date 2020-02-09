@@ -37,10 +37,10 @@ function countBooksByFirstLetter(letter) {
 }
 
 function countBooksByKeyword(keyword) {
-  // let count = 0;
-  // const re = new RegExp(keyword, "gi");
-  // catalogue.forEach(b => b.match(re) ? count++ : []);
-  // return count;
+  let count = 0;
+  const re = new RegExp(keyword, "gi");
+  catalogue.forEach(b => b.match(re) ? count++ : []);
+  return count;
 }
 
 function getBooksByAuthor(author) {

@@ -15,6 +15,15 @@ describe("catalogueService.checkBook", () => {
 });
 
 test("returns true if the book exists in the list", () => {
+  expect(catalogueService.checkBook("Dracula by Bram Stoker")).not.toBeNull();
+  expect(catalogueService.checkBook("Dracula by Bram Stoker")).not.toBeUndefined();
+  expect(catalogueService.checkBook("Dracula by Bram Stoker")).toBeDefined();
+  expect(catalogueService.checkBook("Dracula by Bram Stoker")).toBeTruthy();
+  expect(catalogueService.checkBook("Dracula by Bram Stoker")).not.toBeFalsy();
+
+});
+
+test("returns true if the book exists in the list", () => {
   expect(catalogueService.checkBook("Lord of the Flies by William Golding")).toBe(false);
 });
 
