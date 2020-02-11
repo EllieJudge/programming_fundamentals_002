@@ -44,7 +44,7 @@ function countBooksByKeyword(keyword) {
 }
 
 function getBooksByAuthor(author) {
-  let booksByAuthor = [];
+  const booksByAuthor = [];
   catalogue.forEach(t => t.includes(author) && booksByAuthor.push(t));
   return booksByAuthor;
 }
