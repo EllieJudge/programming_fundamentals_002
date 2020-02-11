@@ -32,20 +32,20 @@ function checkBook(book) {
 
 function countBooksByFirstLetter(letter) {
   let count = 0;
-  catalogue.forEach(t => t.charAt(0) === letter ? count++ : []);
+  catalogue.forEach(t => t.charAt(0) === letter && count++);
   return count;
 }
 
 function countBooksByKeyword(keyword) {
   let count = 0;
   const re = new RegExp(keyword, "gi");
-  catalogue.forEach(b => b.match(re) ? count++ : []);
+  catalogue.forEach(b => b.match(re) && count++ );
   return count;
 }
 
 function getBooksByAuthor(author) {
   let booksByAuthor = [];
-  catalogue.forEach(t => t.includes(author) ? booksByAuthor.push(t) : '');
+  catalogue.forEach(t => t.includes(author) && booksByAuthor.push(t));
   return booksByAuthor;
 }
 
